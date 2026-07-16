@@ -1,21 +1,23 @@
 #!/usr/bin/env ruby
 
-# Builds html/data.json for the Northwestern OA/TA Finder from a local,
+# Builds html/data.json for the Northwestern Journal Policy Finder from a local,
 # version-controlled CSV (data/northwestern-agreements.csv).
 #
-# This replaces the upstream Google-Sheets dependency in bin/update with a
-# reproducible, offline pipeline. The output shape is identical to what the
-# front-end (html/js/script.js) expects:
+# Each journal row carries links to the publisher's open access, embargo/
+# sharing, and APC policy pages, plus the journal's own website. The output
+# shape is what the front-end (html/js/script.js) expects:
 #
-#   { "header": [...8 columns...], "version": "...", "data": [ [ ...8 cells... ], ... ] }
+#   { "header": [...9 columns...], "version": "...", "data": [ [ ...9 cells... ], ... ] }
 #
-# Each row is a positional array of 8 strings; empty cells become null. The
-# eISSN and eISSN Link columns are allowed to be null.
+# Each row is a positional array of 9 strings; empty cells become null. Only
+# eISSN, eISSN Link, Journal Website, and Notes may be blank - the three policy
+# link columns are required (a journal with no known policy link is not listed).
 #
 # Usage: ruby bin/build_data        (run from the repo root)
 
 require "csv"
 require "json"
+require "digest"
 
 CSV_FILE  = File.join(__dir__, "..", "data", "northwestern-agreements.csv")
 JSON_FILE = File.join(__dir__, "..", "html", "data.json")
@@ -25,18 +27,22 @@ HEADER = [
   "Journal Title",
   "eISSN",
   "eISSN Link",
-  "Link to Agreement Info",
+  "Journal Website",
+  "Open Access Options",
+  "Embargo & Sharing Policy",
+  "APC Information",
+  "Notes",
 ]
 
 # Columns that are allowed to be blank/null in the output.
-NULL_ALLOWED = ["eISSN", "eISSN Link", "Link to Agreement Info"]
+NULL_ALLOWED = ["eISSN", "eISSN Link", "Journal Website", "Notes"]
 
 def abort_with(message)
   warn "build_data: #{message}"
   exit 1
 end
 
-rows = CSV.read(CSV_FILE, headers: true)
+rows = CSV.read(CSV_FILE, headers: true, encoding: "UTF-8")
 
 # Validate the header matches exactly (order included).
 unless rows.headers == HEADER
@@ -60,9 +66,11 @@ end
 
 abort_with("no data rows found in #{CSV_FILE}") if data.empty?
 
+# Version is a short content hash of the data so the build is deterministic:
+# it changes only when the data changes, not with the date the build runs.
 output = {
   "header"  => HEADER,
-  "version" => Time.now.strftime("%Y-%m-%d.1"),
+  "version" => Digest::SHA256.hexdigest(JSON.generate(data))[0, 12],
   "data"    => data,
 }
 

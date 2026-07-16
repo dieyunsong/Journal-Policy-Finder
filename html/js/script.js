@@ -6,13 +6,17 @@
  * data.json structure:
  *   {
  *     "header": [...],   // Human-readable column names (not used directly by DataTables)
- *     "version": "...",  // A string representing when the data was last generated.
+ *     "version": "...",  // Short content hash of the data (changes when the data changes).
  *     "data": [          // Array of rows; each row is an array with these indices:
  *       [0] Publisher
  *       [1] Journal Title
- *       [2] eISSN
- *       [3] eISSN Link (URL to ISSN portal)
- *       [4] Link to Agreement Info (URL)
+ *       [2] eISSN (or null)
+ *       [3] eISSN Link (URL to ISSN portal; null when there is no eISSN)
+ *       [4] Journal Website (URL; null when not resolved)
+ *       [5] Open Access Options (publisher/journal policy URL)
+ *       [6] Embargo & Sharing Policy (publisher/journal policy URL)
+ *       [7] APC Information (publisher/journal policy URL)
+ *       [8] Notes (may be null)
  *     ]
  *   }
  *
@@ -26,13 +30,18 @@ $(document).ready(function () {
     var rawData = [];
     // Column definitions map each visible column to its index in the data.json row array.
     // The 'data' property is the numeric index of the corresponding field in each row.
-    // Note: index 3 (eISSN Link URL) is intentionally omitted here because it is
-    // accessed inside a columnDef render function for the eISSN column instead.
+    // Note: index 3 (eISSN Link URL) has no column of its own; it is used inside the
+    // eISSN column's render function to hyperlink the eISSN. The three policy columns
+    // (5/6/7) and the Journal Website (4) render as labelled links to publisher pages.
     var columns = [
         { title: "Journal Title", data: 1 },
         { title: "eISSN", data: 2 },
         { title: "Publisher", data: 0 },
-        { title: "Agreement Info", data: 4 }
+        { title: "Journal Website", data: 4 },
+        { title: "Open Access Options", data: 5 },
+        { title: "Embargo &amp; Sharing", data: 6 },
+        { title: "APC Info", data: 7 },
+        { title: "Notes", data: 8 }
     ];
 
     // Filter state variables.
@@ -108,7 +117,7 @@ $(document).ready(function () {
             },
             top1Start: function () {
                 let filterContainer = document.createElement('div');
-                filterContainer.innerHTML = '<div class="info">Learn more about <a href="#eissnInfo">EISSN</a> and <a href="#agreementInfo">Agreement Info</a>.</div>';
+                filterContainer.innerHTML = '<div class="info">Each policy link goes to the publisher\'s own page. Not sure what a column means? See <a href="#aboutData">About the data</a> below the table.</div>';
                 return filterContainer;
             },
             topStart: 'info',
@@ -164,10 +173,11 @@ $(document).ready(function () {
             $('.dt-search input[type="search"]').attr('autocomplete', 'on');
         },
         columnDefs: [
-            // Exclude the Agreement Info column (rendered index 3) from DataTables'
-            // built-in search so users can't accidentally match on the raw URL.
+            // Exclude the URL-bearing columns (rendered indices 3-6: Journal Website,
+            // Open Access Options, Embargo & Sharing, APC Info) from DataTables'
+            // built-in search so users can't accidentally match on a raw URL.
             {
-                "targets": [3],
+                "targets": [3, 4, 5, 6],
                 "searchable": false
             },
             // eISSN column (rendered index 1, data index 2): wrap the eISSN value in a
@@ -183,18 +193,51 @@ $(document).ready(function () {
                     return data;
                 }
             },
-            // Agreement Info column (rendered index 3, data index 4): render the raw URL
-            // as a descriptive link using the publisher name from row index 0 so the link
-            // text is meaningful for screen reader users.
+            // Journal Website column (rendered index 3, data index 4). Blank when the
+            // journal's own site could not be resolved with confidence.
             {
                 "targets": 3,
-                "width": "150px",
                 "render": function (data, type, row) {
-                    if (type === 'display' && data) {
-                        return '<a href="' + data + '" target="_blank">Info about ' + row[0] + '<span class="material-symbols-rounded">open_in_new</span>' + ' agreement</a>';
+                    if (type === 'display') {
+                        return data ? PolicyLink(data, 'Visit journal', row[1] + ' website') : '';
                     }
                     return data;
                 }
+            },
+            // Policy columns: Open Access Options (4/5), Embargo & Sharing (5/6),
+            // APC Info (6/7). Each renders as a labelled link to the publisher's own
+            // page; the aria-label names the journal so screen-reader users have context.
+            {
+                "targets": 4,
+                "render": function (data, type, row) {
+                    if (type === 'display') {
+                        return data ? PolicyLink(data, 'OA options', 'Open access options for ' + row[1]) : '';
+                    }
+                    return data;
+                }
+            },
+            {
+                "targets": 5,
+                "render": function (data, type, row) {
+                    if (type === 'display') {
+                        return data ? PolicyLink(data, 'Embargo &amp; sharing', 'Embargo and sharing policy for ' + row[1]) : '';
+                    }
+                    return data;
+                }
+            },
+            {
+                "targets": 6,
+                "render": function (data, type, row) {
+                    if (type === 'display') {
+                        return data ? PolicyLink(data, 'APC info', 'APC information for ' + row[1]) : '';
+                    }
+                    return data;
+                }
+            },
+            // Notes column (rendered index 7, data index 8): plain text caveats.
+            {
+                "targets": 7,
+                "width": "180px"
             }
         ]
     });
@@ -313,6 +356,23 @@ $(document).ready(function () {
 });
 
 /**
+ * PolicyLink
+ * Renders a policy/website URL as a compact labelled link that opens in a new
+ * tab. The visible label is short (fits the narrow columns); the aria-label
+ * carries the journal-specific context so screen-reader users know which
+ * journal the policy belongs to.
+ *
+ * @param {string} url - The destination URL (already validated upstream).
+ * @param {string} label - Short visible link text.
+ * @param {string} aria - Descriptive accessible name naming the journal.
+ * @returns {string} HTML anchor markup.
+ */
+function PolicyLink(url, label, aria) {
+    return '<a href="' + url + '" target="_blank" rel="noopener" aria-label="' + aria +
+        '">' + label + '<span class="material-symbols-rounded">open_in_new</span></a>';
+}
+
+/**
  * CreateFilterContainer
  * Returns an HTML string for the publisher dropdown filter.  This is injected into
  * the DataTables layout via the top4Start custom element function defined in the
@@ -362,9 +422,9 @@ function CreateNoResultsMessage() {
             <p style="color: var(--color-neutral-300); margin-bottom: 1.5rem;">Here are the most likely reasons:</p>
             <ol style="color: var(--color-neutral-300); text-align: left; max-width: 600px; margin: 0 auto 1.5rem auto;">
                 <li style="color: var(--color-neutral-300); margin-bottom: 1rem;">
-                    <strong>Journal Not Covered:</strong> The journal is not covered under Northwestern University Libraries or BTAA agreements.
-                    The journal may still be open access, but not managed through these agreements. For some publishers, coverage is listed at the
-                    publisher level &mdash; check the publisher's own journal finder.
+                    <strong>Journal Not Listed:</strong> This tool covers journals from a set of publishers with which Northwestern has
+                    negotiated agreements. A journal outside that set won't appear here even if it has its own open access policy &mdash;
+                    check the publisher's own website.
                     Visit <a href="https://www.library.northwestern.edu/use-the-libraries/research-teaching/open-access-publishing/">Open Access Publishing at Northwestern</a> for more information.
                 </li>
                 <li style="color: var(--color-neutral-300); margin-bottom: 1rem;">
