@@ -1,0 +1,82 @@
+{
+  "_note": "Publisher-level policy pages, each verified by visiting during research on 2026-07-15. Keys match the Publisher column exactly. Fields: oa_options (gold/hybrid/green routes), embargo_sharing (self-archiving / green OA / repository deposit + embargo), apc (article processing charge info / price lists). 'note' carries a caveat shown to users. Small publishers additionally get journal-level pages built by build_final.py.",
+  "Wiley": {
+    "oa_options": "https://authors.wiley.com/author-resources/Journal-Authors/open-access/index.html",
+    "embargo_sharing": "https://authors.wiley.com/author-resources/Journal-Authors/licensing/self-archiving.html",
+    "apc": "https://authors.wiley.com/author-resources/Journal-Authors/open-access/article-publication-charges/index.html",
+    "note": "Publisher-level pages. Green OA embargo is 12-24 months depending on the journal; society-owned titles may set their own terms - confirm on the journal's own page."
+  },
+  "Springer Nature": {
+    "oa_options": "https://www.springernature.com/gp/open-research/about/what-is-open-access",
+    "embargo_sharing": "https://www.springernature.com/gp/open-science/policies/journal-policies",
+    "apc": "https://support.springernature.com/en/support/solutions/articles/6000227571-find-the-article-processing-charges-apc-for-a-specific-journal",
+    "note": "Publisher-level pages; APC varies by journal (see the journal website's Open Access Fees and Funding section). Self-archiving embargo is typically up to 12 months."
+  },
+  "Association of Computing Machinery (ACM)": {
+    "oa_options": "https://www.acm.org/publications/openaccess",
+    "embargo_sharing": "https://www.acm.org/publications/policies/publication-rights-and-licensing-policy",
+    "apc": "https://www.acm.org/publications/openaccess",
+    "note": "ACM moved to fully open access on 2026-01-01 under the ACM Open model; APCs apply to authors at non-participating institutions. There is effectively no green-OA embargo (immediate OA). Policies are publisher-level (ACM does not publish per-journal policy pages); journal home pages are on the ACM Digital Library (dl.acm.org)."
+  },
+  "Cambridge University Press": {
+    "oa_options": "https://www.cambridge.org/core/services/open-access-policies",
+    "embargo_sharing": "https://www.cambridge.org/core/services/open-access-policies/open-access-journals/green-open-access-policy-for-journals",
+    "apc": "https://www.cambridge.org/core/services/open-access-policies/open-access-journals/gold-open-access-journals",
+    "note": "Green OA embargo is typically 6 months (science/medical) to 12 months (humanities/social science) - confirm on the journal's own page."
+  },
+  "American Chemical Society (ACS)": {
+    "oa_options": "https://acsopenscience.org/researchers/open-access/",
+    "embargo_sharing": "https://acsopenscience.org/public_access/",
+    "apc": "https://acsopenscience.org/researchers/oa-pricing/",
+    "note": "Standard green OA embargo is 12 months for hybrid journals; a zero-embargo green OA option exists (see the sharing/public-access page). APC/pricing is via the ACS pricing estimator, not a flat per-journal list."
+  },
+  "Institute of Physics (IOP)": {
+    "oa_options": "https://publishingsupport.iopscience.iop.org/publishing-support/authors/open-access/",
+    "embargo_sharing": "https://publishingsupport.iopscience.iop.org/author-rights-policies/",
+    "apc": "https://publishingsupport.iopscience.iop.org/questions/article-publication-charge-pricing-and-the-costs-of-open-access-publishing/",
+    "note": "Green OA embargo is 12 months (subscription articles). Full APC price list is downloadable from the APC page; preprints may be shared any time."
+  },
+  "Royal Society of Chemistry": {
+    "oa_options": "https://www.rsc.org/publishing/open-access/open-access-options",
+    "embargo_sharing": "https://www.rsc.org/publishing/open-access/sharing-your-research",
+    "apc": "https://www.rsc.org/publishing/open-access/payments-and-funding",
+    "note": "Green OA embargo is 12 months. Gold OA APCs listed on the payments page; RSC members get a 15% discount."
+  },
+  "Microbiology Society": {
+    "oa_options": "https://www.microbiologyresearch.org/routes-to-open-access",
+    "embargo_sharing": "https://www.microbiologyresearch.org/routes-to-open-access",
+    "apc": "https://www.microbiologyresearch.org/publishing-costs",
+    "note": "Green OA (self-archiving) and APC terms are on the linked publisher pages; the accepted manuscript may be deposited, and NIH-mandated deposits are allowed with zero embargo."
+  },
+  "The Company of Biologists": {
+    "oa_options": "https://journals.biologists.com/{code}/pages/open-access",
+    "embargo_sharing": "https://journals.biologists.com/{code}/pages/rights-permissions",
+    "apc": "https://journals.biologists.com/{code}/pages/open-access",
+    "note": "Journal-level pages. Self-archiving of the accepted manuscript is allowed (including zero-embargo PMC deposit for NIH compliance) where standard routes do not meet a mandate.",
+    "journal_codes": {
+      "1477-9129": "dev", "1477-9137": "jcs", "1477-9145": "jeb",
+      "1754-8411": "dmm", "2046-6390": "bio"
+    }
+  },
+  "Cold Spring Harbor Laboratory Press": {
+    "oa_options": "https://{host}.cshlp.org/site/misc/open_access.xhtml",
+    "embargo_sharing": "https://{host}.cshlp.org/site/misc/terms.xhtml",
+    "apc": "https://{host}.cshlp.org/site/misc/open_access.xhtml",
+    "note": "Journal-level pages. Articles become free 6 months after publication; immediate OA available for an APC. Pre/post-prints may be self-archived; complies with NIH Public Access (6-month).",
+    "journal_hosts": {
+      "1549-5477": "genesdev", "1549-5469": "genome",
+      "1469-9001": "rnajournal", "1549-5485": "learnmem"
+    }
+  },
+  "Cogitatio Press": {
+    "oa_options": "https://www.cogitatiopress.com/{slug}/about/editorialPolicies#openAccessPolicy",
+    "embargo_sharing": "https://www.cogitatiopress.com/{slug}/about/editorialPolicies#archiving",
+    "apc": "https://www.cogitatiopress.com/{slug}/about/editorialPolicies#publicationFees",
+    "note": "Fully open access (all journals) under CC BY with no embargo; authors retain copyright. Links go to the journal's own Editorial Policies page (Open Access / Archiving / Publication Fees sections).",
+    "journal_slugs": {
+      "2183-2439": "mediaandcommunication", "2976-0925": "oceanandsociety",
+      "2183-2463": "politicsandgovernance", "2183-2803": "socialinclusion",
+      "2183-7635": "urbanplanning"
+    }
+  }
+}

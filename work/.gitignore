@@ -1,0 +1,4 @@
+# Generated intermediates (rebuild with the scripts here); not source of truth.
+base-journals.csv
+openalex.jsonl
+journal-links.csv
