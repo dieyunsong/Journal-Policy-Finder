@@ -131,6 +131,10 @@ $(document).ready(function () {
         // the filter state and build the filter dropdown checkboxes.
         ajax: {
             url: "data.json",
+            // Bypass the browser/CDN cache for the dataset so authors always see the
+            // current policy links (jQuery appends a "_=<timestamp>" query param).
+            // Correctness of compliance data outweighs re-fetching the file.
+            cache: false,
             dataSrc: function (json) {
                 // Cache the full dataset so the custom search function can reference
                 // raw field values (e.g., publisher name at index 0) by row index.
