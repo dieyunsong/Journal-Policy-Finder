@@ -1,0 +1,101 @@
+{
+  "P4310320595": {
+    "name": "Wiley",
+    "homepage": "https://www.wiley.com",
+    "oa_options": "https://authors.wiley.com/author-resources/Journal-Authors/open-access/index.html",
+    "embargo_sharing": "https://authors.wiley.com/author-resources/Journal-Authors/licensing/self-archiving.html",
+    "apc": "https://authors.wiley.com/author-resources/Journal-Authors/open-access/article-publication-charges/index.html",
+    "note": "Publisher-level pages. Green OA embargo is 12-24 months depending on the journal; society-owned titles may set their own terms - confirm on the journal's own page.",
+    "verified": "2026-07-15"
+  },
+  "P4310319900": {
+    "name": "Springer Nature",
+    "homepage": "https://www.springernature.com",
+    "oa_options": "https://www.springernature.com/gp/open-research/about/what-is-open-access",
+    "embargo_sharing": "https://www.springernature.com/gp/open-science/policies/journal-policies",
+    "apc": "https://support.springernature.com/en/support/solutions/articles/6000227571-find-the-article-processing-charges-apc-for-a-specific-journal",
+    "note": "Publisher-level pages; APC varies by journal (see the journal website's Open Access Fees and Funding section). Self-archiving embargo is typically up to 12 months.",
+    "verified": "2026-07-15"
+  },
+  "P4310319798": {
+    "name": "Association of Computing Machinery (ACM)",
+    "homepage": "https://www.acm.org",
+    "oa_options": "https://www.acm.org/publications/openaccess",
+    "embargo_sharing": "https://www.acm.org/publications/policies/publication-rights-and-licensing-policy",
+    "apc": "https://www.acm.org/publications/openaccess",
+    "note": "ACM moved to fully open access on 2026-01-01 under the ACM Open model; APCs apply to authors at non-participating institutions. There is effectively no green-OA embargo (immediate OA). Policies are publisher-level (ACM does not publish per-journal policy pages); journal home pages are on the ACM Digital Library (dl.acm.org).",
+    "verified": "2026-07-15"
+  },
+  "P4310311721": {
+    "name": "Cambridge University Press",
+    "homepage": "https://www.cambridge.org",
+    "oa_options": "https://www.cambridge.org/core/services/open-access-policies",
+    "embargo_sharing": "https://www.cambridge.org/core/services/open-access-policies/open-access-journals/green-open-access-policy-for-journals",
+    "apc": "https://www.cambridge.org/core/services/open-access-policies/open-access-journals/gold-open-access-journals",
+    "note": "Green OA embargo is typically 6 months (science/medical) to 12 months (humanities/social science) - confirm on the journal's own page.",
+    "verified": "2026-07-15"
+  },
+  "P4310320006": {
+    "name": "American Chemical Society (ACS)",
+    "homepage": "https://www.acs.org",
+    "oa_options": "https://acsopenscience.org/researchers/open-access/",
+    "embargo_sharing": "https://acsopenscience.org/public_access/",
+    "apc": "https://acsopenscience.org/researchers/oa-pricing/",
+    "note": "Standard green OA embargo is 12 months for hybrid journals; a zero-embargo green OA option exists (see the sharing/public-access page). APC/pricing is via the ACS pricing estimator, not a flat per-journal list.",
+    "verified": "2026-07-15"
+  },
+  "P4310320083": {
+    "name": "Institute of Physics (IOP)",
+    "homepage": "https://ioppublishing.org",
+    "oa_options": "https://publishingsupport.iopscience.iop.org/publishing-support/authors/open-access/",
+    "embargo_sharing": "https://publishingsupport.iopscience.iop.org/author-rights-policies/",
+    "apc": "https://publishingsupport.iopscience.iop.org/questions/article-publication-charge-pricing-and-the-costs-of-open-access-publishing/",
+    "note": "Green OA embargo is 12 months (subscription articles). Full APC price list is downloadable from the APC page; preprints may be shared any time.",
+    "verified": "2026-07-15"
+  },
+  "P4310320556": {
+    "name": "Royal Society of Chemistry",
+    "homepage": "https://www.rsc.org",
+    "oa_options": "https://www.rsc.org/publishing/open-access/open-access-options",
+    "embargo_sharing": "https://www.rsc.org/publishing/open-access/sharing-your-research",
+    "apc": "https://www.rsc.org/publishing/open-access/payments-and-funding",
+    "note": "Green OA embargo is 12 months. Gold OA APCs listed on the payments page; RSC members get a 15% discount.",
+    "verified": "2026-07-15"
+  },
+  "P4310320497": {
+    "name": "Microbiology Society",
+    "homepage": "https://microbiologysociety.org",
+    "oa_options": "https://www.microbiologyresearch.org/routes-to-open-access",
+    "embargo_sharing": "https://www.microbiologyresearch.org/routes-to-open-access",
+    "apc": "https://www.microbiologyresearch.org/publishing-costs",
+    "note": "Green OA (self-archiving) and APC terms are on the linked publisher pages; the accepted manuscript may be deposited, and NIH-mandated deposits are allowed with zero embargo.",
+    "verified": "2026-07-15"
+  },
+  "P4310311847": {
+    "name": "The Company of Biologists",
+    "homepage": "https://www.biologists.com",
+    "oa_options": "https://journals.biologists.com/journals/pages/open-access",
+    "embargo_sharing": "https://www.biologists.com/open-access/",
+    "apc": "https://journals.biologists.com/journals/pages/open-access",
+    "note": "Publisher-level pages covering all five journals (Development, Journal of Cell Science, Journal of Experimental Biology, Disease Models & Mechanisms, Biology Open). Self-archiving of the accepted manuscript is allowed (including zero-embargo PMC deposit for NIH compliance) where standard routes do not meet a mandate; the 12-month subscribe-to-open window applies to the three transformative journals. APCs are set per journal - see the linked Journals Gateway open-access overview.",
+    "verified": "2026-07-15"
+  },
+  "P4310315909": {
+    "name": "Cold Spring Harbor Laboratory Press",
+    "homepage": "https://www.cshl.edu/cold-spring-harbor-laboratory-press/",
+    "oa_options": "https://www.cshl.edu/cold-spring-harbor-laboratory-press/journals/transformative-agreements/",
+    "embargo_sharing": "https://www.cshl.edu/cold-spring-harbor-laboratory-press/",
+    "apc": "https://www.cshl.edu/cold-spring-harbor-laboratory-press/journal-resources/",
+    "note": "Publisher-level pages covering the four research journals (Genes & Development, Genome Research, RNA, Learning & Memory), which are Transformative Journals. Articles become free 6 months after publication under the standard subscription route; immediate OA is available via an APC or a transformative agreement. Pre/post-prints may be self-archived; complies with NIH Public Access (6-month). No single general self-archiving page was found on cshlpress.com (per-journal terms pages exist instead), so embargo_sharing points to the CSHL Press landing page.",
+    "verified": "2026-07-15"
+  },
+  "P4310318509": {
+    "name": "Cogitatio Press",
+    "homepage": "https://www.cogitatiopress.com",
+    "oa_options": "https://www.cogitatiopress.com/index/about",
+    "embargo_sharing": "https://www.cogitatiopress.com/index/about",
+    "apc": "https://www.cogitatiopress.com/index/about/institutionalmembership",
+    "note": "Fully open access (all five journals) under CC BY with no embargo; authors retain copyright; SHERPA/RoMEO Green Publisher status. Links go to the publisher's general About page (open access + self-archiving policy) and Institutional Membership page (APC waivers for member institutions); per-journal editorial-policies pages carry the same terms.",
+    "verified": "2026-07-15"
+  }
+}
