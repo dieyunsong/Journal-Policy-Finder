@@ -4,147 +4,79 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Northwestern Journal Policy Finder</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link href="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.3.2/datatables.min.css" rel="stylesheet"
-    integrity="sha384-dG72sN6C6+JA9moN/5eRa0GqXlYOpTivxgRRV4rTctUeb4ZNF6uuJ5NXmz+8+3Qi" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
-  <link rel="stylesheet" href="css/styles.css?v=2">
+  <title>Journal Policy Finder</title>
+  <meta name="description" content="Find a journal's open-access, embargo, and APC policy links in one place.">
+  <link rel="stylesheet" href="css/styles.css?v=3">
 </head>
 
 <body>
-  <div role="navigation" class="skip-links" aria-label="Skip links">
-    <div class="viewport-container">
-      <ul>
-        <li><a href="#maincontent">Skip to main content</a></li>
-        <li><a href="#searchandfilter">Skip to Search and Filter</a></li>
-      </ul>
-    </div>
+  <div class="skip-links">
+    <a href="#main">Skip to main content</a>
   </div>
-  <header class="nu-header">
-    <div class="viewport-container">
-      <div class="nu-header__inner">
-        <a href="https://www.library.northwestern.edu/" class="nu-header__eyebrow">Northwestern University Libraries</a>
-        <span class="nu-header__title">Journal Policy Finder</span>
-      </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <p class="eyebrow">Northwestern University Libraries</p>
+      <h1>Journal Policy Finder</h1>
+      <p class="lede">
+        Look up a journal's open-access options, embargo &amp; self-archiving (green OA) rules, and
+        article processing charge (APC) information &mdash; with links straight to the publisher's own pages.
+      </p>
+      <p class="lede lede-secondary">
+        Looking for a Northwestern <strong>transformative agreement</strong> (a waiver or discount on APCs)?
+        This tool flags TA coverage on each journal's card and complements
+        <a href="https://dieyunsong.github.io/TA-Finder/" target="_blank" rel="noopener">TA-Finder</a>,
+        which covers the discount details.
+      </p>
     </div>
   </header>
-  <main>
-    <div class="viewport-container mt-5 mb-5" id="maincontent">
-      <h1 class="mb-4">Journal Policy Finder</h1>
-      <p style="max-width:38rem; font-size: 1.125rem;" class="mb-4">
-        This tool helps <strong>Northwestern-affiliated authors</strong> find each journal's publisher policies in
-        one place: how to publish <strong>open access (OA)</strong>, the publisher's <strong>embargo and article
-        sharing (green OA / self-archiving)</strong> rules, and where to look up <strong>Article Processing Charges
-        (APCs)</strong>. Every link points to the publisher's (or journal's) own page, so the authoritative source is
-        always one click away &mdash; useful when checking compliance with funder and federal public-access mandates.
-      </p>
-      <p style="max-width:38rem; font-size: 1.125rem;" class="mb-4">Considerations:
-      <ul>
-        <li style="max-width:38rem; font-size: 1.125rem;"><strong>Links, not values.</strong> Because publisher terms
-          change and vary by article type, this tool links you to the current policy rather than quoting a number that
-          could go stale. Confirm the specifics (embargo length, APC amount, licence) on the linked page.</li>
-        <li style="max-width:38rem; font-size: 1.125rem;"><strong>Some links are publisher-level.</strong> A few
-          publishers (e.g., Springer Nature, Wiley, ACM) publish one policy that applies across their journals; others
-          (e.g., Company of Biologists, Cold Spring Harbor, Cogitatio) have per-journal pages. The <strong>Notes</strong>
-          column flags anything you should double-check.</li>
-        <li style="max-width:38rem; font-size: 1.125rem;"><strong>When searching common terms in titles</strong>, the
-          results list can be long. Try searching by eISSN for a direct match, or adjust 'Items per page' to see more
-          titles at once.</li>
-      </ul>
-      </p>
-      <p>
-        See <a href="https://www.library.northwestern.edu/use-the-libraries/research-teaching/open-access-publishing/">Open
-          Access Publishing at Northwestern</a> for library agreements, or email
-        <a href="mailto:scholarlycommunication@northwestern.edu">scholarlycommunication@northwestern.edu</a> with questions.
-      </p>
-      <hr class="horizontal-line" />
-      <div style="overflow-x: auto; width: 100%;">
-        <table id="apcTable" class="m-table" style="min-width: 1200px;"></table>
-      </div>
-      <hr />
-      <h2 id="aboutData">About the data</h2>
-      <p style="max-width:38rem;" class="mb-4">
-        Each row is one journal from a publisher with which Northwestern (or the Big Ten Academic Alliance) has an
-        open access agreement. The policy links were located from each publisher's official pages and verified during
-        compilation; where a journal-specific page exists it is used, otherwise the publisher-wide page is linked and
-        noted. Where a link could not be grounded with confidence it is left blank rather than guessed. The columns:
-      </p>
-      <ul style="max-width:38rem;" class="mb-4">
-        <li class="mb-2"><strong>Journal Title</strong> &mdash; the journal; where an eISSN links out, it goes to the
-          journal's record on the ISSN portal.</li>
-        <li class="mb-2"><strong id="eissnInfo">eISSN</strong> &mdash; the electronic ISSN, linking to the ISSN portal
-          (associated ISSNs under &ldquo;Identifiers&rdquo;, journal website under &ldquo;Links&rdquo;).</li>
-        <li class="mb-2"><strong>Publisher</strong> &mdash; the publisher whose policies apply; use the filter above the
-          table to narrow to specific publishers.</li>
-        <li class="mb-2"><strong>Journal Website</strong> &mdash; the journal's own homepage, where journal-specific
-          details (including per-journal APCs for some publishers) live. Blank when it could not be resolved with
-          confidence.</li>
-        <li class="mb-2"><strong>Open Access Options</strong> &mdash; the publisher's page describing how to publish OA
-          (gold / hybrid / green routes).</li>
-        <li class="mb-2"><strong>Embargo &amp; Sharing</strong> &mdash; the publisher's self-archiving / green-OA /
-          repository-deposit policy, including embargo length. This is the key page for public-access compliance.</li>
-        <li class="mb-2"><strong>APC Info</strong> &mdash; where to find Article Processing Charge amounts (a price
-          list, calculator, or the journal's fees page).</li>
-        <li class="mb-2"><strong>Notes</strong> &mdash; caveats: whether a link is publisher-level, embargo specifics,
-          or why a journal website is blank.</li>
-      </ul>
-      <p style="max-width:38rem;" class="mb-4">
-        Policies change; always confirm the current terms on the linked publisher page before relying on them.
-      </p>
-      <a href="#apcTable_info" style="text-decoration: none;"><span style="text-decoration: underline;">Return to
-          results</span><span style="text-decoration:none !important"> &#9650;</span></a>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="panel" aria-labelledby="search-heading">
+        <h2 id="search-heading">Search</h2>
+        <form id="search" class="search-form">
+          <label for="q" class="visually-hidden">Journal title or ISSN</label>
+          <input type="text" id="q" name="q" placeholder="Journal title or ISSN" autocomplete="off">
+          <button type="submit">Search</button>
+        </form>
+      </section>
+
+      <section class="panel" aria-labelledby="browse-heading">
+        <h2 id="browse-heading">Browse by discipline</h2>
+        <p class="hint">Pick up to 3 subject areas.</p>
+        <div id="tags" class="tags-grid"></div>
+        <div class="browse-controls">
+          <label class="ta-only-toggle">
+            <input type="checkbox" id="ta-only">
+            TA only
+          </label>
+          <button type="button" id="browse">Show journals</button>
+        </div>
+      </section>
+
+      <section class="panel results-panel" aria-labelledby="results-heading">
+        <h2 id="results-heading" class="visually-hidden">Results</h2>
+        <div id="results"></div>
+      </section>
     </div>
   </main>
-  <footer class="footer mt-20" id="footer">
-    <div class="viewport-container">
-      <div class="footer__content">
-        <section class="first-column">
-          <h2>Northwestern University Libraries</h2>
-          <ul>
-            <li><a href="https://www.library.northwestern.edu/"><span class="address">1970 Campus Drive, Evanston, IL
-                  60208</span></a></li>
-          </ul>
-        </section>
-        <section>
-          <h2>Contact Us</h2>
-          <ul>
-            <li><a href="mailto:scholarlycommunication@northwestern.edu">scholarlycommunication@northwestern.edu</a></li>
-          </ul>
-        </section>
-        <section>
-          <h2>More Info</h2>
-          <ul>
-            <li><a href="https://www.library.northwestern.edu/use-the-libraries/research-teaching/open-access-publishing/">Open
-                Access Publishing at Northwestern</a></li>
-          </ul>
-        </section>
-      </div>
-    </div>
-    <div class="footer__disclaimer">
-      <div class="viewport-container">
-        <p>&copy; <span id="year">2026</span> Northwestern University</p>
-        <p>
-          Adapted from the
-          <a href="https://github.com/mlibrary/article-processing-charge-list">University of Michigan APC list</a>
-          (BSD-3-Clause).
-        </p>
-      </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>
+        This tool is a preliminary aid built from OpenAlex metadata and publisher-level policy pages &mdash;
+        always confirm current terms (embargo length, APC amount, licence) on the publisher's or journal's own page
+        before relying on them.
+      </p>
+      <p>
+        Questions? Email
+        <a href="mailto:scholarlycommunication@northwestern.edu">scholarlycommunication@northwestern.edu</a>.
+      </p>
     </div>
   </footer>
-  <script>
-    const year = new Date().getFullYear();
-    document.getElementById('year').textContent = year;
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.3.2/datatables.min.js"
-    integrity="sha384-qLLX0jMaWXMZrun5/ry13tv5MX78CJNleGaaJVXRuJCDiAwyjhYWsTM3Qk3VaKC3"
-    crossorigin="anonymous"></script>
-  <script src="js/script.js?v=2"></script>
-</body>
 
+  <script type="module" src="js/app.js"></script>
+</body>
 
 </html>
