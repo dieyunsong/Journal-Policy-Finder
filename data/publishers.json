@@ -6,7 +6,8 @@
     "embargo_sharing": "https://authors.wiley.com/author-resources/Journal-Authors/licensing/self-archiving.html",
     "apc": "https://authors.wiley.com/author-resources/Journal-Authors/open-access/article-publication-charges/index.html",
     "note": "Publisher-level pages. Green OA embargo is 12-24 months depending on the journal; society-owned titles may set their own terms - confirm on the journal's own page.",
-    "verified": "2026-07-15"
+    "verified": "2026-07-15",
+    "source": "verified"
   },
   "P4310319900": {
     "name": "Springer Nature",
@@ -19,7 +20,8 @@
     "aliases": [
       "P4310319965",
       "P4310320108"
-    ]
+    ],
+    "source": "verified"
   },
   "P4310319798": {
     "name": "Association for Computing Machinery (ACM)",
@@ -28,7 +30,8 @@
     "embargo_sharing": "https://www.acm.org/publications/policies/publication-rights-and-licensing-policy",
     "apc": "https://www.acm.org/publications/openaccess",
     "note": "ACM moved to fully open access on 2026-01-01 under the ACM Open model; APCs apply to authors at non-participating institutions. There is effectively no green-OA embargo (immediate OA). Policies are publisher-level (ACM does not publish per-journal policy pages); journal home pages are on the ACM Digital Library (dl.acm.org).",
-    "verified": "2026-07-15"
+    "verified": "2026-07-15",
+    "source": "verified"
   },
   "P4310311721": {
     "name": "Cambridge University Press",
@@ -37,7 +40,8 @@
     "embargo_sharing": "https://www.cambridge.org/core/services/open-access-policies/open-access-journals/green-open-access-policy-for-journals",
     "apc": "https://www.cambridge.org/core/services/open-access-policies/open-access-journals/gold-open-access-journals",
     "note": "Green OA embargo is typically 6 months (science/medical) to 12 months (humanities/social science) - confirm on the journal's own page.",
-    "verified": "2026-07-15"
+    "verified": "2026-07-15",
+    "source": "verified"
   },
   "P4310320006": {
     "name": "American Chemical Society (ACS)",
@@ -46,7 +50,8 @@
     "embargo_sharing": "https://acsopenscience.org/public_access/",
     "apc": "https://acsopenscience.org/researchers/oa-pricing/",
     "note": "Standard green OA embargo is 12 months for hybrid journals; a zero-embargo green OA option exists (see the sharing/public-access page). APC/pricing is via the ACS pricing estimator, not a flat per-journal list.",
-    "verified": "2026-07-15"
+    "verified": "2026-07-15",
+    "source": "verified"
   },
   "P4310320083": {
     "name": "Institute of Physics (IOP)",
@@ -55,7 +60,8 @@
     "embargo_sharing": "https://publishingsupport.iopscience.iop.org/author-rights-policies/",
     "apc": "https://publishingsupport.iopscience.iop.org/questions/article-publication-charge-pricing-and-the-costs-of-open-access-publishing/",
     "note": "Green OA embargo is 12 months (subscription articles). Full APC price list is downloadable from the APC page; preprints may be shared any time.",
-    "verified": "2026-07-15"
+    "verified": "2026-07-15",
+    "source": "verified"
   },
   "P4310320556": {
     "name": "Royal Society of Chemistry",
@@ -64,7 +70,8 @@
     "embargo_sharing": "https://www.rsc.org/publishing/open-access/sharing-your-research",
     "apc": "https://www.rsc.org/publishing/open-access/payments-and-funding",
     "note": "Green OA embargo is 12 months. Gold OA APCs listed on the payments page; RSC members get a 15% discount.",
-    "verified": "2026-07-15"
+    "verified": "2026-07-15",
+    "source": "verified"
   },
   "P4310320497": {
     "name": "Microbiology Society",
@@ -73,7 +80,8 @@
     "embargo_sharing": "https://www.microbiologyresearch.org/routes-to-open-access",
     "apc": "https://www.microbiologyresearch.org/publishing-costs",
     "note": "Green OA (self-archiving) and APC terms are on the linked publisher pages; the accepted manuscript may be deposited, and NIH-mandated deposits are allowed with zero embargo.",
-    "verified": "2026-07-15"
+    "verified": "2026-07-15",
+    "source": "verified"
   },
   "P4310311847": {
     "name": "The Company of Biologists",
@@ -82,7 +90,8 @@
     "embargo_sharing": "https://www.biologists.com/open-access/",
     "apc": "https://journals.biologists.com/journals/pages/open-access",
     "note": "Publisher-level pages covering all five journals (Development, Journal of Cell Science, Journal of Experimental Biology, Disease Models & Mechanisms, Biology Open). Self-archiving of the accepted manuscript is allowed (including zero-embargo PMC deposit for NIH compliance) where standard routes do not meet a mandate; the 12-month subscribe-to-open window applies to the three transformative journals. APCs are set per journal - see the linked Journals Gateway open-access overview.",
-    "verified": "2026-07-15"
+    "verified": "2026-07-15",
+    "source": "verified"
   },
   "P4310315909": {
     "name": "Cold Spring Harbor Laboratory Press",
@@ -91,7 +100,8 @@
     "embargo_sharing": "https://www.cshl.edu/cold-spring-harbor-laboratory-press/",
     "apc": "https://www.cshl.edu/cold-spring-harbor-laboratory-press/journal-resources/",
     "note": "Publisher-level pages covering the four research journals (Genes & Development, Genome Research, RNA, Learning & Memory), which are Transformative Journals. Articles become free 6 months after publication under the standard subscription route; immediate OA is available via an APC or a transformative agreement. Pre/post-prints may be self-archived; complies with NIH Public Access (6-month). No single general self-archiving page was found on cshlpress.com (per-journal terms pages exist instead), so embargo_sharing points to the CSHL Press landing page.",
-    "verified": "2026-07-15"
+    "verified": "2026-07-15",
+    "source": "verified"
   },
   "P4310318509": {
     "name": "Cogitatio Press",
@@ -100,6 +110,137 @@
     "embargo_sharing": "https://www.cogitatiopress.com/index/about",
     "apc": "https://www.cogitatiopress.com/index/about/institutionalmembership",
     "note": "Fully open access (all five journals) under CC BY with no embargo; authors retain copyright; SHERPA/RoMEO Green Publisher status. Links go to the publisher's general About page (open access + self-archiving policy) and Institutional Membership page (APC waivers for member institutions); per-journal editorial-policies pages carry the same terms.",
-    "verified": "2026-07-15"
+    "verified": "2026-07-15",
+    "source": "verified"
+  },
+  "P4310320990": {
+    "name": "Elsevier",
+    "homepage": "https://www.elsevier.com",
+    "oa_options": "https://www.elsevier.com/open-access",
+    "embargo_sharing": "https://www.elsevier.com/about/policies-and-standards/sharing",
+    "apc": "https://www.elsevier.com/about/policies-and-standards/pricing",
+    "note": "Hybrid and fully open access journals. Preprints may be shared any time; the accepted manuscript may go in an institutional repository only after that journal's embargo, which Elsevier sets per title (see the embargo list linked from the sharing page) rather than as one blanket period. APCs also vary by journal - the pricing page links a full price list.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310320547": {
+    "name": "Taylor & Francis",
+    "homepage": "https://taylorandfrancis.com",
+    "oa_options": "https://authorservices.taylorandfrancis.com/choose-open/publishing-open-access/",
+    "embargo_sharing": "https://authorservices.taylorandfrancis.com/research-impact/sharing-versions-of-journal-articles/",
+    "apc": "https://authorservices.taylorandfrancis.com/choose-open/publishing-open-access/oa-green-gold/",
+    "note": "Hybrid and fully open access journals. Green OA embargo on the accepted manuscript is typically 12 months for science, technology and medicine titles and 18 months for social sciences and humanities. A zero-embargo green option exists for authors with funder mandates - worth checking if you must deposit immediately.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310319847": {
+    "name": "Routledge (Taylor & Francis)",
+    "homepage": "https://www.routledge.com",
+    "oa_options": "https://authorservices.taylorandfrancis.com/choose-open/publishing-open-access/",
+    "embargo_sharing": "https://authorservices.taylorandfrancis.com/research-impact/sharing-versions-of-journal-articles/",
+    "apc": "https://authorservices.taylorandfrancis.com/choose-open/publishing-open-access/oa-green-gold/",
+    "note": "Routledge is a Taylor & Francis imprint and follows the same policies. Green OA embargo is typically 18 months for social sciences and humanities (most Routledge titles) and 12 months for science and medicine. A zero-embargo green option exists for funder-mandated deposits.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310320017": {
+    "name": "SAGE Publishing",
+    "homepage": "https://www.sagepub.com",
+    "oa_options": "https://www.sagepub.com/journals/information-for-authors/publishing-options",
+    "embargo_sharing": "https://www.sagepub.com/en-us/nam/posting-to-an-institutional-repository-green-open-access",
+    "apc": "https://www.sagepub.com/journals/information-for-authors/publishing-options/gold-open-access-article-processing-charge-waivers",
+    "note": "Hybrid and fully open access journals. The accepted version of a subscription article may be posted to an institutional repository for non-commercial, no-derivative use; embargo length is set per journal, so confirm on the journal's own page. Automatic APC waivers apply for authors in Research4Life Group A countries and 50% discounts for Group B.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310311648": {
+    "name": "Oxford University Press",
+    "homepage": "https://academic.oup.com",
+    "oa_options": "https://academic.oup.com/pages/open-research/open-access",
+    "embargo_sharing": "https://academic.oup.com/pages/open-research/open-access/charges-licences-and-self-archiving/accepted-manuscript-embargo-periods",
+    "apc": "https://academic.oup.com/pages/open-research/open-access/charges-licences-and-self-archiving",
+    "note": "Hybrid and fully open access journals. The standard green OA embargo is 12 months from online publication for the accepted manuscript, but OUP runs several self-archiving policies and embargoes differ by journal - check your title on the embargo periods page before depositing.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310313990": {
+    "name": "De Gruyter Brill",
+    "homepage": "https://www.degruyterbrill.com",
+    "oa_options": "https://www.degruyterbrill.com/publishing/for-authors/journal-authors/open-access",
+    "embargo_sharing": "https://www.degruyterbrill.com/publishing/for-authors/author-policies/repository-policy-journals",
+    "apc": "https://www.degruyterbrill.com/publishing/for-authors/tools-resources/open-access-guide",
+    "note": "Hybrid and fully open access journals. The submitted preprint may be self-archived at any time; the version of record may go in a repository after a 12-month embargo for subscription and closed-access hybrid articles. Note this green route does not satisfy Plan S - publish gold if your funder requires immediate OA.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310320322": {
+    "name": "De Gruyter Open",
+    "homepage": "https://www.degruyterbrill.com",
+    "oa_options": "https://www.degruyterbrill.com/publishing/for-authors/journal-authors/open-access",
+    "embargo_sharing": "https://www.degruyterbrill.com/publishing/for-authors/author-policies/repository-policy-journals",
+    "apc": "https://www.degruyterbrill.com/publishing/for-authors/tools-resources/open-access-guide",
+    "note": "De Gruyter's fully open access imprint, now part of De Gruyter Brill. Articles are open on publication with no embargo, so self-archiving is unrestricted. APC varies by journal.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310319808": {
+    "name": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "homepage": "https://www.ieee.org",
+    "oa_options": "https://open.ieee.org/",
+    "embargo_sharing": "https://journals.ieeeauthorcenter.ieee.org/choose-a-publishing-agreement/open-access-rights-management/",
+    "apc": "https://open.ieee.org/for-authors/article-processing-charges/",
+    "note": "Hybrid journals, fully open access topical journals, and IEEE Access. Authors may post the accepted manuscript to a personal or employer site, and green OA deposit in a funder-mandated public repository is allowed at no charge. APC is about $2,160 for fully OA titles and $2,800 for hybrid, with IEEE member discounts.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310319811": {
+    "name": "Emerald Publishing",
+    "homepage": "https://www.emeraldgrouppublishing.com",
+    "oa_options": "https://www.emeraldgrouppublishing.com/publish-with-us/publish-open-access/journal",
+    "embargo_sharing": "https://www.emeraldgrouppublishing.com/publish-with-us/author-policies/our-open-research-policies",
+    "apc": "https://www.emeraldgrouppublishing.com/publish-with-us/publish-open-access/journal",
+    "note": "Hybrid and fully open access journals. Emerald has offered zero-embargo green OA since 2014: the accepted manuscript may be deposited immediately on publication under CC BY-NC at no charge, which satisfies most funder mandates without an APC. CC BY on the accepted manuscript requires a paid APC or an institutional agreement.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310315671": {
+    "name": "Lippincott Williams & Wilkins (Wolters Kluwer)",
+    "homepage": "https://www.wolterskluwer.com/en/solutions/lippincott-journals",
+    "oa_options": "https://www.wolterskluwer.com/en/solutions/open-access-at-wolters-kluwer-health/lippincott-open-access",
+    "embargo_sharing": "https://www.wolterskluwer.com/en/expert-insights/authors-quick-guide-open-access",
+    "apc": "https://home.lww.com/publish/WK-Open-Access/Publish.html",
+    "note": "Mostly subscription and hybrid medical journals. Green OA embargo on the accepted manuscript is 12 months where the journal offers an open access option and 6 months where it does not, deposited under CC BY-NC. LWW deposits NIH-funded articles to PubMed Central on the author's behalf.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310320256": {
+    "name": "BioMed Central (Springer Nature)",
+    "homepage": "https://www.biomedcentral.com",
+    "oa_options": "https://www.biomedcentral.com/getpublished",
+    "embargo_sharing": "https://www.biomedcentral.com/getpublished/copyright-and-license",
+    "apc": "https://www.biomedcentral.com/getpublished/article-processing-charges",
+    "note": "Fully open access. Articles publish immediately open under CC BY with authors retaining copyright, so there is no embargo and self-archiving is unrestricted. Eligible articles are deposited to PubMed Central automatically. APC varies by journal; waivers exist for member institutions and demonstrated hardship.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310310987": {
+    "name": "MDPI",
+    "homepage": "https://www.mdpi.com",
+    "oa_options": "https://www.mdpi.com/openaccess",
+    "embargo_sharing": "https://www.mdpi.com/authors/rights",
+    "apc": "https://www.mdpi.com/apc",
+    "note": "Fully open access. All articles publish immediately under CC BY with no embargo, and authors retain copyright without signing a transfer, so any version may be deposited in a repository at any time. APC varies by journal; discounts and waivers are available.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310320527": {
+    "name": "Frontiers Media",
+    "homepage": "https://www.frontiersin.org",
+    "oa_options": "https://www.frontiersin.org/about/open-access",
+    "embargo_sharing": "https://www.frontiersin.org/legal/copyright-statement",
+    "apc": "https://www.frontiersin.org/about/fee-policy",
+    "note": "Fully open access. Articles publish immediately under CC BY with authors retaining copyright, so there is no embargo on self-archiving. Publishing fees vary by journal and article type and are payable only on acceptance; discounts are available for authors in low and lower-middle income countries.",
+    "verified": "2026-07-31",
+    "source": "drafted"
   }
 }

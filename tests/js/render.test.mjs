@@ -17,8 +17,7 @@ test("curated card shows policy links, verified date, and TA badge", () => {
 
 test("fallback card shows the not-curated flag and Sherpa link", () => {
   const html = renderCard(resolveCard(JOURNALS[1], PUBLISHERS, TA_SET));
-  assert.match(html, /not yet curated/i);
-  assert.ok(html.includes("sherpa.ac.uk"));
+  assert.match(html, /haven't compiled/i);
 });
 
 import { renderDisambiguation, renderList } from "../../html/js/render.js";

@@ -35,12 +35,9 @@ export function renderCard(vm) {
   return `<div class="card fallback">${head}
     <p class="publisher">Publisher: <strong>${escapeHtml(p.name)}</strong></p>
     ${taBadge(vm.ta)}
-    <p class="flag">This publisher is not yet curated — confirm policy on the publisher's site.</p>
-    <ul class="policy-links">
-      ${p.homepage ? `<li>${link(p.homepage, "Publisher website")}</li>` : ""}
-      <li>${link(p.sherpa, "Look up self-archiving policy (Sherpa Romeo)")}</li>
-      <li>${link(p.doaj, "Look up in DOAJ")}</li>
-    </ul>
+    <p class="flag">We haven't compiled this publisher's policies yet. Check their site for
+      open-access options, embargo and sharing rules, and article processing charges.</p>
+    ${p.homepage ? `<ul class="policy-links"><li>${link(p.homepage, "Publisher website")}</li></ul>` : ""}
   </div>`;
 }
 
