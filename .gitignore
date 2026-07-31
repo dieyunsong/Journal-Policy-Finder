@@ -1,2 +1,6 @@
 /credentials.json64
 .DS_Store
+build/
+node_modules/
+__pycache__/
+.pytest_cache/

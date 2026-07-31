@@ -1,0 +1,46 @@
+[
+  {
+    "id": "https://openalex.org/S100",
+    "display_name": "Journal of Widget Science",
+    "issn_l": "1111-2222",
+    "issn": ["1111-2222", "3333-4444"],
+    "type": "journal",
+    "works_count": 1200,
+    "host_organization": "https://openalex.org/P1",
+    "host_organization_name": "Wiley",
+    "topics": [{"subfield": {"id": "https://openalex.org/subfields/2208", "display_name": "Electrical and Electronic Engineering"}}]
+  },
+  {
+    "id": "https://openalex.org/S200",
+    "display_name": "Obscure Regional Review",
+    "issn_l": "5555-6666",
+    "issn": ["5555-6666"],
+    "type": "journal",
+    "works_count": 80,
+    "host_organization": "https://openalex.org/P9",
+    "host_organization_name": "Tiny Society Press",
+    "topics": [{"subfield": {"id": "https://openalex.org/subfields/1202", "display_name": "History"}}]
+  },
+  {
+    "id": "https://openalex.org/S300",
+    "display_name": "Almost Dead Journal",
+    "issn_l": "7777-8888",
+    "issn": ["7777-8888"],
+    "type": "journal",
+    "works_count": 10,
+    "host_organization": "https://openalex.org/P1",
+    "host_organization_name": "Wiley",
+    "topics": []
+  },
+  {
+    "id": "https://openalex.org/S400",
+    "display_name": "Some Repository",
+    "issn_l": null,
+    "issn": null,
+    "type": "repository",
+    "works_count": 5000,
+    "host_organization": "https://openalex.org/I1",
+    "host_organization_name": "Some University",
+    "topics": []
+  }
+]
