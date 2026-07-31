@@ -18,7 +18,27 @@ def test_parse_source_shapes_record():
     assert out["publisher"] == "P1"
     assert out["publisher_name"] == "Wiley"
     assert out["works_count"] == 1200
-    assert out["subfields"] == [{"id": "2208", "name": "Electrical and Electronic Engineering"}]
+    assert out["subfields"] == [
+        {"id": "2208", "name": "Electrical and Electronic Engineering", "count": 0}
+    ]
 
 def test_parse_source_handles_missing_topics():
     assert parse_source(S300)["subfields"] == []
+
+def test_parse_source_sums_counts_per_subfield_and_orders_by_count():
+    # Two topics roll up to subfield 1000 (3+5=8); one topic gives 2000 a count
+    # of 7. Summing first must rank 1000 ahead of 2000, even though the raw
+    # topic order leads with the smaller 1000 entry.
+    rec = {
+        "display_name": "J", "issn_l": "1111-1111", "issn": ["1111-1111"],
+        "type": "journal", "works_count": 100,
+        "host_organization": "https://openalex.org/P1", "host_organization_name": "Pub",
+        "topics": [
+            {"count": 3, "subfield": {"id": "https://openalex.org/subfields/1000", "display_name": "A"}},
+            {"count": 7, "subfield": {"id": "https://openalex.org/subfields/2000", "display_name": "B"}},
+            {"count": 5, "subfield": {"id": "https://openalex.org/subfields/1000", "display_name": "A"}},
+        ],
+    }
+    out = parse_source(rec)["subfields"]
+    assert [s["id"] for s in out] == ["1000", "2000"]
+    assert out[0]["count"] == 8 and out[1]["count"] == 7

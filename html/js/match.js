@@ -39,6 +39,9 @@ export function findMatches(index, query) {
     return hit ? { tier: "issn", matches: [hit] } : { tier: "none", matches: [] };
   }
   const nq = normalizeTitle(q);
+  // A query of pure punctuation ("?") normalizes away. Without this guard the
+  // fuzzy pass below matches everything, since key.startsWith("") is always true.
+  if (!nq) return { tier: "none", matches: [] };
   if (index.byTitle.has(nq)) return { tier: "title", matches: index.byTitle.get(nq) };
   const fuzzy = [];
   for (const [key, arr] of index.byTitle) {

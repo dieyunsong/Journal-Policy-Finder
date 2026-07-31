@@ -488,3 +488,89 @@ button.result:hover {
     transition: none !important;
   }
 }
+
+/* ---- Grouped discipline chips -------------------------------------------
+   Chips are grouped under their Google Scholar area because 41 subcategory
+   labels are duplicated across areas; the heading is what tells two identical
+   "Public Health" chips apart. Chips with no journals are never rendered. */
+.tag-group {
+  border: 1px solid var(--rule, #d8d4cc);
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem 0.85rem;
+  margin: 0 0 0.9rem;
+  min-width: 0;
+}
+
+.tag-group legend {
+  padding: 0 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted, #6b6558);
+}
+
+.tag-count {
+  margin-left: 0.35rem;
+  font-size: 0.78em;
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+}
+
+.tag-hint {
+  min-height: 1.2em;
+  margin: 0.35rem 0 0;
+  font-size: 0.86rem;
+  color: var(--accent, #4e2a84);
+}
+
+/* ---- Status / loading / error messages ---------------------------------- */
+.status {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  background: var(--surface-2, #f4f1ea);
+  color: var(--muted, #6b6558);
+}
+
+.status.loading::after {
+  content: "";
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-left: 0.5em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  vertical-align: -0.05em;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .status.loading::after { animation: none; }
+}
+
+.status.error {
+  background: #fdeeee;
+  color: #8a1f1f;
+  border: 1px solid #e8b4b4;
+}
+
+.result-count {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  color: var(--muted, #6b6558);
+}
+
+.disambig-list .meta {
+  display: block;
+  font-size: 0.84rem;
+  color: var(--muted, #6b6558);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
