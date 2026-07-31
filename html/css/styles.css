@@ -233,37 +233,6 @@ main {
 
 /* ---------- Browse / tags ---------- */
 
-.tags-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.tag-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.88rem;
-  padding: 0.4rem 0.75rem;
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  background: var(--card);
-  cursor: pointer;
-  user-select: none;
-}
-
-.tag-chip:has(input:checked) {
-  background: var(--purple-tint);
-  border-color: var(--purple);
-  color: var(--purple-ink);
-  font-weight: 600;
-}
-
-.tag-chip input {
-  accent-color: var(--purple);
-}
-
 .browse-controls {
   display: flex;
   align-items: center;
@@ -493,36 +462,6 @@ button.result:hover {
    Chips are grouped under their Google Scholar area because 41 subcategory
    labels are duplicated across areas; the heading is what tells two identical
    "Public Health" chips apart. Chips with no journals are never rendered. */
-.tag-group {
-  border: 1px solid var(--rule, #d8d4cc);
-  border-radius: 8px;
-  padding: 0.6rem 0.85rem 0.85rem;
-  margin: 0 0 0.9rem;
-  min-width: 0;
-}
-
-.tag-group legend {
-  padding: 0 0.4rem;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--muted, #6b6558);
-}
-
-.tag-count {
-  margin-left: 0.35rem;
-  font-size: 0.78em;
-  opacity: 0.6;
-  font-variant-numeric: tabular-nums;
-}
-
-.tag-hint {
-  min-height: 1.2em;
-  margin: 0.35rem 0 0;
-  font-size: 0.86rem;
-  color: var(--accent, #4e2a84);
-}
 
 /* ---- Status / loading / error messages ---------------------------------- */
 .status {
@@ -573,4 +512,224 @@ button.result:hover {
 button:disabled {
   opacity: 0.55;
   cursor: not-allowed;
+}
+
+/* ==========================================================================
+   Search panel: mode toggle + swapping field + TA filter
+   One block at the top so results stay on screen. The previous layout put a
+   172-checkbox grid between the search box and the results.
+   ========================================================================== */
+.search-panel { position: relative; z-index: 20; }
+
+.search-form { display: flex; flex-direction: column; gap: 0.85rem; }
+
+.mode-toggle {
+  display: inline-flex;
+  gap: 0;
+  border: 1px solid var(--rule, #d8d4cc);
+  border-radius: 999px;
+  padding: 3px;
+  margin: 0;
+  align-self: flex-start;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.mode-option { position: relative; }
+
+.mode-option input {
+  position: absolute;
+  opacity: 0;
+  width: 100%; height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.mode-option span {
+  display: block;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--muted, #6b6558);
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.mode-option input:checked + span {
+  background: var(--accent, #4e2a84);
+  color: #fff;
+}
+
+.mode-option input:focus-visible + span {
+  outline: 2px solid var(--accent, #4e2a84);
+  outline-offset: 2px;
+}
+
+.search-row { display: flex; gap: 0.6rem; align-items: flex-start; }
+.search-field { flex: 1 1 auto; min-width: 0; }
+.search-row > button { flex: 0 0 auto; }
+
+.ta-only-toggle {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  color: var(--muted, #6b6558);
+  cursor: pointer;
+}
+.ta-only-toggle input { margin-top: 0.2rem; flex: 0 0 auto; }
+
+/* ---- Discipline picker --------------------------------------------------- */
+.picker { position: relative; }
+
+.picker-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2.9rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--rule, #d8d4cc);
+  border-radius: 8px;
+  background: var(--surface, #fff);
+}
+.picker-control:focus-within {
+  border-color: var(--accent, #4e2a84);
+  box-shadow: 0 0 0 3px rgba(78, 42, 132, 0.14);
+}
+
+.picker-open {
+  flex: 1 1 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 0;
+  padding: 0.3rem 0.2rem;
+  font: inherit;
+  color: var(--muted, #6b6558);
+  cursor: pointer;
+  text-align: left;
+}
+.picker-control.has-pills .picker-open { flex-basis: 6rem; }
+.picker-caret { opacity: 0.6; }
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.3rem 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--accent, #4e2a84);
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.pill-x {
+  border: 0;
+  background: rgba(255, 255, 255, 0.22);
+  color: inherit;
+  width: 1.15rem; height: 1.15rem;
+  border-radius: 50%;
+  line-height: 1;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: grid;
+  place-items: center;
+}
+.pill-x:hover { background: rgba(255, 255, 255, 0.4); }
+
+.picker-panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0; right: 0;
+  z-index: 30;
+  max-height: 19rem;
+  overflow-y: auto;
+  background: var(--surface, #fff);
+  border: 1px solid var(--rule, #d8d4cc);
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+.picker-list { list-style: none; margin: 0; padding: 0.25rem; }
+
+.picker-area,
+.picker-topic {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+  padding: 0.55rem 0.6rem;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.picker-area { justify-content: space-between; }
+.picker-area:hover,
+.picker-topic:hover,
+.picker-area:focus-visible,
+.picker-topic:focus-within { background: var(--surface-2, #f4f1ea); }
+
+.picker-topic span:first-of-type { flex: 1 1 auto; }
+.picker-topic.is-disabled { opacity: 0.45; cursor: not-allowed; }
+
+.picker-meta {
+  font-size: 0.82rem;
+  color: var(--muted, #6b6558);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.picker-crumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--rule, #d8d4cc);
+  position: sticky;
+  top: 0;
+  background: var(--surface, #fff);
+}
+.picker-back {
+  border: 0; background: none; padding: 0.15rem 0.3rem;
+  font: inherit; color: var(--accent, #4e2a84); cursor: pointer; border-radius: 4px;
+}
+.picker-back:hover { text-decoration: underline; }
+.picker-crumb-area { font-weight: 600; font-size: 0.9rem; }
+
+.picker-hint {
+  min-height: 1.15em;
+  margin: 0.3rem 0 0;
+  font-size: 0.86rem;
+  color: var(--accent, #4e2a84);
+}
+
+.status.intro { background: none; padding: 0.4rem 0; }
+
+@media (max-width: 34rem) {
+  .search-row { flex-direction: column; align-items: stretch; }
+  .search-row > button { width: 100%; }
+  .mode-toggle { display: flex; width: 100%; }
+  .mode-option { flex: 1 1 0; }
+  .mode-option span { text-align: center; padding-inline: 0.5rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .picker-panel, .picker-crumb { background: var(--surface, #1e1c19); }
+}
+
+/* Pills sit directly in the control's flex flow rather than in a nested box. */
+.picker-pills { display: contents; }
+
+.picker-open-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

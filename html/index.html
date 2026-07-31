@@ -33,27 +33,41 @@
 
   <main id="main">
     <div class="wrap">
-      <section class="panel" aria-labelledby="search-heading">
-        <h2 id="search-heading">Search</h2>
+      <section class="panel search-panel" aria-labelledby="search-heading">
+        <h2 id="search-heading" class="visually-hidden">Search</h2>
         <form id="search" class="search-form">
-          <label for="q" class="visually-hidden">Journal title or ISSN</label>
-          <input type="text" id="q" name="q" placeholder="Journal title or ISSN" autocomplete="off">
-          <button type="submit" id="search-submit">Search</button>
-        </form>
-      </section>
+          <fieldset class="mode-toggle">
+            <legend class="visually-hidden">Search by</legend>
+            <label class="mode-option">
+              <input type="radio" name="mode" value="title" checked>
+              <span>Journal title or ISSN</span>
+            </label>
+            <label class="mode-option">
+              <input type="radio" name="mode" value="discipline">
+              <span>Disciplines and topics</span>
+            </label>
+          </fieldset>
 
-      <section class="panel" aria-labelledby="browse-heading">
-        <h2 id="browse-heading">Browse by discipline</h2>
-        <p class="hint">Pick up to 3 disciplines. Counts show how many journals each covers.</p>
-        <div id="tags" class="tags-grid"></div>
-        <p id="tag-hint" class="tag-hint" role="status" aria-live="polite"></p>
-        <div class="browse-controls">
+          <div class="search-row">
+            <div id="title-field" class="search-field">
+              <label for="q" class="visually-hidden">Journal title or ISSN</label>
+              <input type="text" id="q" name="q" placeholder="e.g. Nature Medicine, or 2053-1583"
+                     autocomplete="off">
+            </div>
+
+            <div id="discipline-field" class="search-field" hidden>
+              <div id="discipline-picker" class="picker"></div>
+            </div>
+
+            <button type="submit" id="search-submit">Search</button>
+          </div>
+
           <label class="ta-only-toggle">
             <input type="checkbox" id="ta-only">
-            Only journals under a Northwestern agreement
+            Only journals under an Open Access and Transformative Agreement with Northwestern
+            University
           </label>
-          <button type="button" id="browse">Show journals</button>
-        </div>
+        </form>
       </section>
 
       <section class="panel results-panel" aria-labelledby="results-heading">
