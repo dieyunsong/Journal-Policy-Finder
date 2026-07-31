@@ -37,24 +37,39 @@ export function renderCard(vm) {
     ${taBadge(vm.ta)}
     <p class="flag">This publisher is not yet curated — confirm policy on the publisher's site.</p>
     <ul class="policy-links">
+      ${p.homepage ? `<li>${link(p.homepage, "Publisher website")}</li>` : ""}
       <li>${link(p.sherpa, "Look up self-archiving policy (Sherpa Romeo)")}</li>
       <li>${link(p.doaj, "Look up in DOAJ")}</li>
     </ul>
   </div>`;
 }
 
-export function renderDisambiguation(matches) {
-  const items = matches.map((m) =>
-    `<li><button class="disambig" data-issn="${escapeHtml(m.issn_l)}">${escapeHtml(m.name)}</button></li>`).join("");
-  return `<p>Did you mean:</p><ul class="disambig-list">${items}</ul>`;
+function publisherName(journal, publishers) {
+  const p = publishers instanceof Map
+    ? publishers.get(journal.publisher)
+    : publishers && publishers[journal.publisher];
+  return (p && p.name) || journal.publisher_name || "";
 }
 
-export function renderList(journals, publishers) {
+/** 575 journals share an exact display name with another (Clinical Science
+ *  appears five times), so the title alone cannot identify a choice. Show the
+ *  publisher and ISSN too. */
+export function renderDisambiguation(matches, publishers, heading = "Did you mean:") {
+  const items = matches.map((m) =>
+    `<li><button class="disambig" data-issn="${escapeHtml(m.issn_l)}">${escapeHtml(m.name)}</button>
+      <span class="meta">${escapeHtml(publisherName(m, publishers))} · ISSN ${escapeHtml(m.issn_l)}</span></li>`
+  ).join("");
+  return `<p>${escapeHtml(heading)}</p><ul class="disambig-list">${items}</ul>`;
+}
+
+export function renderList(journals, publishers, total = null) {
   if (!journals.length) return `<p>No journals match those filters.</p>`;
-  const rows = journals.map((j) => {
-    const pubName = (publishers[j.publisher] && publishers[j.publisher].name) || j.publisher_name || "";
-    return `<li><button class="result" data-issn="${escapeHtml(j.issn_l)}">${escapeHtml(j.name)}</button>
-      <span class="pub">${escapeHtml(pubName)}</span></li>`;
-  }).join("");
-  return `<ul class="result-list">${rows}</ul>`;
+  const rows = journals.map((j) =>
+    `<li><button class="result" data-issn="${escapeHtml(j.issn_l)}">${escapeHtml(j.name)}</button>
+      <span class="pub">${escapeHtml(publisherName(j, publishers))}</span></li>`
+  ).join("");
+  const note = total !== null && total > journals.length
+    ? `<p class="result-count">Showing the ${journals.length} largest of ${total} matching journals — add a discipline to narrow it down.</p>`
+    : `<p class="result-count">${journals.length} journal${journals.length === 1 ? "" : "s"}</p>`;
+  return `${note}<ul class="result-list">${rows}</ul>`;
 }

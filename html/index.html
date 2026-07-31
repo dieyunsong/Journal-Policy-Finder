@@ -38,18 +38,19 @@
         <form id="search" class="search-form">
           <label for="q" class="visually-hidden">Journal title or ISSN</label>
           <input type="text" id="q" name="q" placeholder="Journal title or ISSN" autocomplete="off">
-          <button type="submit">Search</button>
+          <button type="submit" id="search-submit">Search</button>
         </form>
       </section>
 
       <section class="panel" aria-labelledby="browse-heading">
         <h2 id="browse-heading">Browse by discipline</h2>
-        <p class="hint">Pick up to 3 subject areas.</p>
+        <p class="hint">Pick up to 3 disciplines. Counts show how many journals each covers.</p>
         <div id="tags" class="tags-grid"></div>
+        <p id="tag-hint" class="tag-hint" role="status" aria-live="polite"></p>
         <div class="browse-controls">
           <label class="ta-only-toggle">
             <input type="checkbox" id="ta-only">
-            TA only
+            Only journals under a Northwestern agreement
           </label>
           <button type="button" id="browse">Show journals</button>
         </div>
@@ -57,7 +58,7 @@
 
       <section class="panel results-panel" aria-labelledby="results-heading">
         <h2 id="results-heading" class="visually-hidden">Results</h2>
-        <div id="results"></div>
+        <div id="results" role="region" aria-live="polite" aria-busy="false"></div>
       </section>
     </div>
   </main>

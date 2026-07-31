@@ -15,10 +15,14 @@
     "embargo_sharing": "https://www.springernature.com/gp/open-science/policies/journal-policies",
     "apc": "https://support.springernature.com/en/support/solutions/articles/6000227571-find-the-article-processing-charges-apc-for-a-specific-journal",
     "note": "Publisher-level pages; APC varies by journal (see the journal website's Open Access Fees and Funding section). Self-archiving embargo is typically up to 12 months.",
-    "verified": "2026-07-15"
+    "verified": "2026-07-15",
+    "aliases": [
+      "P4310319965",
+      "P4310320108"
+    ]
   },
   "P4310319798": {
-    "name": "Association of Computing Machinery (ACM)",
+    "name": "Association for Computing Machinery (ACM)",
     "homepage": "https://www.acm.org",
     "oa_options": "https://www.acm.org/publications/openaccess",
     "embargo_sharing": "https://www.acm.org/publications/policies/publication-rights-and-licensing-policy",
