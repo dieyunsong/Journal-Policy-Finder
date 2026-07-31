@@ -26,3 +26,18 @@ test("fuzzy match on typo", () => {
 test("no match returns none", () => {
   assert.equal(findMatches(idx, "zzzzz nonexistent").tier, "none");
 });
+
+test("a title that normalizes to empty never becomes a match-all wildcard", () => {
+  const idx = buildMatchIndex([
+    { name: "!!! ---", issn_l: "0000-0001", issns: ["0000-0001"], publisher: "P1", works_count: 10, tags: [] },
+    { name: "Real Journal", issn_l: "0000-0002", issns: ["0000-0002"], publisher: "P1", works_count: 10, tags: [] },
+  ]);
+  assert.equal(findMatches(idx, "zzzq nonexistent xyz").tier, "none");
+});
+
+test("non-Latin titles are findable by their own title", () => {
+  const idx = buildMatchIndex([
+    { name: "Έρευνα στην Εκπαίδευση", issn_l: "0000-0003", issns: ["0000-0003"], publisher: "P1", works_count: 10, tags: [] },
+  ]);
+  assert.equal(findMatches(idx, "Έρευνα στην Εκπαίδευση").tier, "title");
+});

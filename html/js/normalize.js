@@ -5,7 +5,10 @@ export function normalizeTitle(s) {
     .normalize("NFKD").replace(/[̀-ͯ]/g, "")
     .toLowerCase()
     .replace(ARTICLES, "")
-    .replace(/[^a-z0-9]+/g, " ")
+    // Keep letters/digits of ANY script: a Latin-only class would erase Greek,
+    // Cyrillic, and CJK titles to "", making them unsearchable and turning that
+    // empty key into a wildcard that matches every query.
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
     .trim();
 }
 

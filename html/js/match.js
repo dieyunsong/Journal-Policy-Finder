@@ -6,6 +6,9 @@ export function buildMatchIndex(journals) {
   for (const j of journals) {
     for (const i of j.issns) byIssn.set(normalizeIssn(i), j);
     const key = normalizeTitle(j.name);
+    // A title that normalizes to "" (pure punctuation) must never enter the
+    // title map: "".startsWith / startsWith("") make it match every query.
+    if (!key) continue;
     if (!byTitle.has(key)) byTitle.set(key, []);
     byTitle.get(key).push(j);
   }

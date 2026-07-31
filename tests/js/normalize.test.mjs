@@ -17,3 +17,15 @@ test("isIssn", () => {
   assert.equal(isIssn("1543-7221"), true);
   assert.equal(isIssn("Journal of X"), false);
 });
+
+test("normalizeTitle preserves non-Latin scripts (Greek/Cyrillic/CJK)", () => {
+  // A Latin-only character class would erase these to "", making the journals
+  // unsearchable and turning the empty key into a match-everything wildcard.
+  assert.notEqual(normalizeTitle("Έρευνα στην Εκπαίδευση"), "");
+  assert.notEqual(normalizeTitle("Вопросы философии"), "");
+  assert.notEqual(normalizeTitle("日本物理学会誌"), "");
+});
+
+test("normalizeTitle still collapses punctuation-only titles to empty", () => {
+  assert.equal(normalizeTitle("--- !!! ---"), "");
+});
