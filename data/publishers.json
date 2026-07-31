@@ -242,5 +242,195 @@
     "note": "Fully open access. Articles publish immediately under CC BY with authors retaining copyright, so there is no embargo on self-archiving. Publishing fees vary by journal and article type and are payable only on acceptance; discounts are available for authors in low and lower-middle income countries.",
     "verified": "2026-07-31",
     "source": "drafted"
+  },
+  "P4310319869": {
+    "name": "Hindawi (Wiley)",
+    "homepage": "https://www.hindawi.com",
+    "oa_options": "https://authors.wiley.com/author-resources/Journal-Authors/open-access/index.html",
+    "embargo_sharing": "https://authors.wiley.com/wiley-s-self-archiving-policy.html",
+    "apc": "https://www.hindawi.com/publish-research/authors/waiver-policy/",
+    "note": "All Hindawi journals are fully open access, now published under Wiley. Articles are open on publication, so there is no embargo on self-archiving. APCs apply per journal, with automatic Research4Life waivers and discounts for authors in low- and middle-income countries.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310320561": {
+    "name": "Brill (De Gruyter Brill)",
+    "homepage": "https://brill.com",
+    "oa_options": "https://www.degruyterbrill.com/publishing/for-authors/journal-authors/open-access",
+    "embargo_sharing": "https://brill.com/page/rightsandpermissions",
+    "apc": "https://brill.com/page/419148",
+    "note": "Hybrid journals, now part of De Gruyter Brill. Hybrid gold OA carries an APC of about EUR 2,400 with authors retaining copyright under CC BY; institutional agreements can cover it. The green route is free: the version of record may be self-archived after a 12-month embargo.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310317820": {
+    "name": "Karger Publishers",
+    "homepage": "https://karger.com",
+    "oa_options": "https://karger.com/pages/open-access",
+    "embargo_sharing": "https://karger.com/pages/types-open-access-licences-copyright-and-costs",
+    "apc": "https://karger.com/pages/types-open-access-licences-copyright-and-costs",
+    "note": "Hybrid and fully open access biomedical journals. Preprints may be shared without restriction; the accepted manuscript may go in a public repository after a 12-month embargo (or as the funder requires), and non-commercial posting to a personal page or institutional repository is permitted. APC varies by journal, roughly EUR 3,800-4,400 at the top end.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310320262": {
+    "name": "American Psychological Association (APA)",
+    "homepage": "https://www.apa.org/pubs/journals",
+    "oa_options": "https://www.apa.org/pubs/journals/resources/open-access",
+    "embargo_sharing": "https://www.apa.org/pubs/journals/resources/internet-posting-guidelines",
+    "apc": "https://www.apa.org/pubs/journals/resources/open-access",
+    "note": "Subscription and hybrid journals with green and gold routes. APA's posting guidelines allow the accepted manuscript on personal sites, institutional repositories, PsyArXiv, and author networks with no embargo, provided the copyright notice and a DOI link to the version of record are included. Gold OA via APC or an institutional Read-and-Publish agreement.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310319815": {
+    "name": "World Scientific",
+    "homepage": "https://www.worldscientific.com",
+    "oa_options": "https://www.worldscientific.com/page/open",
+    "embargo_sharing": "https://www.worldscientific.com/page/authors/author-rights",
+    "apc": "https://www.worldscientific.com/page/open",
+    "note": "Hybrid and fully open access journals. Preprints may be posted anywhere at any time; the accepted manuscript may go in a repository 12 months after publication. Gold OA (CC BY or CC BY-NC) removes the embargo entirely and authors retain copyright. APC varies by journal.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310321135": {
+    "name": "Georg Thieme Verlag",
+    "homepage": "https://www.thieme.com",
+    "oa_options": "https://www.thieme.com/en-us/who-we-serve/authors/journals/open-access",
+    "embargo_sharing": "https://open.thieme.com/policy",
+    "apc": "https://www.thieme.com/en-us/who-we-serve/authors/journals/open-access",
+    "note": "Hybrid and fully open access medical journals. Open access articles may be deposited anywhere immediately under their CC license; for subscription articles the accepted manuscript may go in a non-commercial institutional repository no earlier than 12 months after publication. Complies with the NIH Public Access Policy.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310320000": {
+    "name": "Thieme Medical Publishers",
+    "homepage": "https://www.thieme.com",
+    "oa_options": "https://www.thieme.com/en-us/who-we-serve/authors/journals/open-access",
+    "embargo_sharing": "https://open.thieme.com/policy",
+    "apc": "https://www.thieme.com/en-us/who-we-serve/authors/journals/open-access",
+    "note": "Part of the Thieme Group; same policies as Georg Thieme Verlag. OA articles may be deposited immediately; subscription-article accepted manuscripts carry a 12-month embargo for institutional repositories. Complies with the NIH Public Access Policy.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310320443": {
+    "name": "Mary Ann Liebert, Inc.",
+    "homepage": "https://home.liebertpub.com",
+    "oa_options": "https://home.liebertpub.com/open-access/policies-and-faqs/134",
+    "embargo_sharing": "https://home.liebertpub.com/page/self-archiving/51",
+    "apc": "https://home.liebertpub.com/open-access/policies-and-faqs/134",
+    "note": "Hybrid and fully open access journals with a notably permissive green route: the accepted manuscript may be posted to an institutional repository, funder repository, or personal website immediately on publication, with no embargo and no charge. APCs apply only if you choose gold OA; Research4Life waivers and discounts available.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310320448": {
+    "name": "Medknow (Wolters Kluwer)",
+    "homepage": "https://www.wolterskluwer.com/en/solutions/open-access-at-wolters-kluwer-health/medknow",
+    "oa_options": "https://www.wolterskluwer.com/en/solutions/open-access-at-wolters-kluwer-health/medknow",
+    "embargo_sharing": "https://www.wolterskluwer.com/en/solutions/open-access-at-wolters-kluwer-health/medknow/journal-author-solutions",
+    "apc": "https://www.wolterskluwer.com/en/solutions/open-access-at-wolters-kluwer-health/medknow/journal-author-solutions",
+    "note": "Open access society journals, mostly from medical societies in India and Asia. Most titles charge no APC and provide immediate free access to full text; self-archiving is permitted. Policies vary by journal - confirm on the journal's own page.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310319908": {
+    "name": "Nature Portfolio (Springer Nature)",
+    "homepage": "https://www.nature.com",
+    "oa_options": "https://www.springernature.com/gp/open-science/policies/journal-policies",
+    "embargo_sharing": "https://www.nature.com/nature-portfolio/editorial-policies/self-archiving-and-license-to-publish",
+    "apc": "https://support.springernature.com/en/support/solutions/articles/6000227571-find-the-article-processing-charges-apc-for-a-specific-journal",
+    "note": "Nature-branded subscription, hybrid, and fully OA journals. Subscription-route authors may self-archive the accepted manuscript on a personal site or in funder/institutional repositories for public release 6 months after publication. Gold OA (CC BY, APC varies by journal) removes the embargo.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310315672": {
+    "name": "University of Chicago Press",
+    "homepage": "https://www.journals.uchicago.edu",
+    "oa_options": "https://www.journals.uchicago.edu/open",
+    "embargo_sharing": "https://www.journals.uchicago.edu/open",
+    "apc": "https://www.journals.uchicago.edu/open",
+    "note": "Subscription and hybrid journals with portfolio-wide green OA: the accepted manuscript or published PDF may be deposited in a non-commercial repository and made freely available 12 months after publication; funder mandates with shorter embargoes are honored for the accepted manuscript only. Each journal has its own 'Open Access at Chicago' page - check it for gold OA fees.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310317825": {
+    "name": "Inderscience Publishers",
+    "homepage": "https://www.inderscience.com",
+    "oa_options": "https://www.inderscience.com/info/inauthors/author_oa.php",
+    "embargo_sharing": "https://www.inderscience.com/about/copyright.html",
+    "apc": "https://www.inderscience.com/info/inauthors/author_oa.php",
+    "note": "Subscription journals with a gold OA option (APC around EUR 2,200-3,300). OA authors retain copyright under CC BY and may post the version of record to non-commercial repositories with no embargo. For non-OA articles, check the copyright page for what may be shared.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310320348": {
+    "name": "Dove Medical Press (Taylor & Francis)",
+    "homepage": "https://www.dovepress.com",
+    "oa_options": "https://www.dovepress.com/why-publish-with-dove-press/open-access",
+    "embargo_sharing": "https://www.dovepress.com/author-guidelines/open-access-agreements",
+    "apc": "https://www.dovepress.com/author-guidelines/journal-publishing-fees",
+    "note": "Fully open access medical journals, part of Taylor & Francis. Articles publish immediately under CC BY-NC (CC BY available for certain funders) with authors retaining copyright, so there is no embargo. APC varies by journal; full waivers and 50% discounts apply for authors in low-income economies.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310319748": {
+    "name": "EDP Sciences",
+    "homepage": "https://www.edpsciences.org",
+    "oa_options": "https://www.edpsciences.org/en/open-science",
+    "embargo_sharing": "https://www.edpsciences.org/en/authors/copyright-and-licensing",
+    "apc": "https://www.edpsciences.org/en/publication-charges",
+    "note": "Society-owned journals, many fully OA or under Subscribe-to-Open. Green OA is unusually generous: all versions (submitted, accepted, and version of record) may be deposited in institutional or subject repositories without embargo, under the article's license. Publication charges vary by journal.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310320424": {
+    "name": "IGI Global",
+    "homepage": "https://www.igi-global.com",
+    "oa_options": "https://www.igi-global.com/journals/open-access/",
+    "embargo_sharing": "https://www.igi-global.com/about/rights-permissions/content-reuse/",
+    "apc": "https://www.igi-global.com/publish/contributor-resources/open-access-policies/",
+    "note": "Open access and hybrid journals, including diamond OA titles with no APC. OA articles publish under CC BY 4.0 with authors keeping copyright; the fair-use policy also lets authors post the final typeset PDF on a personal site or university repository. Where funders require it, the accepted manuscript may be deposited under CC BY.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310320402": {
+    "name": "John Benjamins Publishing Company",
+    "homepage": "https://benjamins.com",
+    "oa_options": "https://www.benjamins.com/content/openaccess",
+    "embargo_sharing": "https://www.benjamins.com/content/authors/openaccesspolicy",
+    "apc": "https://benjamins.com/content/open-access/general-information",
+    "note": "Hybrid linguistics journals. The submitted manuscript may be posted anywhere at any time; the accepted manuscript may go on a personal site, institutional or funder repository, and preprint servers after the version of record publishes. Gold OA APC is about EUR 1,800, waived under Read-and-Publish agreements.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310320079": {
+    "name": "Bentham Science Publishers",
+    "homepage": "https://www.benthamscience.com",
+    "oa_options": "https://www.benthamscience.com/open-access-plus",
+    "embargo_sharing": "https://www.benthamscience.com/self-archiving-policies",
+    "apc": "https://www.benthamscience.com/open-access-plus",
+    "note": "Subscription journals with a gold OA option (Open Access Plus) plus some fully OA titles. The accepted manuscript may be deposited on a personal site, institutional repository, PMC, or arXiv 12 months after publication; gold OA articles have no embargo. The final published version may only be archived under a funder mandate.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310311755": {
+    "name": "Intellect",
+    "homepage": "https://www.intellectbooks.com",
+    "oa_options": "https://www.intellectbooks.com/open-access-journals-faqs",
+    "embargo_sharing": "https://www.intellectbooks.com/open-access-journals-faqs",
+    "apc": "https://www.intellectbooks.com/open-access-journals-faqs",
+    "note": "Arts and media journals, mostly hybrid, with some diamond OA titles that charge no APC. Green self-archiving is supported, typically with an embargo for subscription articles - the OA FAQs page covers routes, fees, and the self-archiving policy. Confirm your journal's terms on its own page.",
+    "verified": "2026-07-31",
+    "source": "drafted"
+  },
+  "P4310320267": {
+    "name": "Pleiades Publishing",
+    "homepage": "https://www.pleiades.online",
+    "oa_options": "https://www.pleiades.online/en/authors/openaccess/",
+    "embargo_sharing": "https://www.pleiades.online/en/authors/openaccess/license/",
+    "apc": "https://www.pleiades.online/en/authors/openaccess/how-to-publish/",
+    "note": "English-language editions of Russian-origin journals, distributed via Springer. Non-OA authors transfer exclusive rights to the publisher, so sharing is mainly via links to the published article; gold OA articles publish under CC BY with no embargo. Check the license page before depositing anything in a repository.",
+    "verified": "2026-07-31",
+    "source": "drafted"
   }
 }
