@@ -733,3 +733,27 @@ button:disabled {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+/* Agreement marker on result rows: purple disc, white check. Paired with the
+   TA-first sort in filter.js, so the checked rows cluster at the top. */
+.ta-check {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50%;
+  background: var(--accent, #4e2a84);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@media (prefers-contrast: more) {
+  .ta-check { outline: 1px solid #fff; outline-offset: -2px; }
+}
+
+.result-list li > .ta-check { margin-left: 0.35rem; }
+
+.ta-note { color: var(--accent, #4e2a84); }

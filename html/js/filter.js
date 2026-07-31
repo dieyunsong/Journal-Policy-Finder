@@ -20,6 +20,13 @@ export function filterJournals(journals, tags, taOnly, taSet, limit = BROWSE_LIM
     if (taOnly && !taSet.has(j.issn_l)) return false;
     return true;
   });
-  out.sort((a, b) => (b.works_count || 0) - (a.works_count || 0));
+  // Journals under an agreement rank first: that is the actionable result for a
+  // Northwestern author, and it keeps them from being pushed past the display
+  // limit by larger journals the university has no agreement with. Article
+  // count breaks the tie within each band.
+  out.sort((a, b) => {
+    const ta = Number(taSet.has(b.issn_l)) - Number(taSet.has(a.issn_l));
+    return ta || (b.works_count || 0) - (a.works_count || 0);
+  });
   return { items: out.slice(0, limit), total: out.length };
 }

@@ -127,7 +127,7 @@ function runDisciplineSearch() {
     return;
   }
   const { items, total } = filterJournals(state.journals, tags, taOnly, state.taSet);
-  resultsEl().innerHTML = renderList(items, state.publishers, total);
+  resultsEl().innerHTML = renderList(items, state.publishers, total, state.taSet);
   bindResultButtons(".result");
 }
 

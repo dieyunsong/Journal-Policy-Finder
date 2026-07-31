@@ -62,14 +62,29 @@ export function renderDisambiguation(matches, publishers, heading = "Did you mea
   return `<p>${escapeHtml(heading)}</p><ul class="disambig-list">${items}</ul>`;
 }
 
-export function renderList(journals, publishers, total = null) {
+/** Compact agreement marker for list rows — the full explanation lives on the card. */
+function taCheck(covered) {
+  return covered
+    ? `<span class="ta-check" title="Covered by a Northwestern Open Access and Transformative Agreement"
+         aria-label="Covered by a Northwestern agreement">✓</span>`
+    : "";
+}
+
+export function renderList(journals, publishers, total = null, taSet = null) {
   if (!journals.length) return `<p>No journals match those filters.</p>`;
   const rows = journals.map((j) =>
-    `<li><button class="result" data-issn="${escapeHtml(j.issn_l)}">${escapeHtml(j.name)}</button>
+    `<li>${taCheck(taSet ? taSet.has(j.issn_l) : false)}<button class="result" data-issn="${escapeHtml(j.issn_l)}">${escapeHtml(j.name)}</button>
       <span class="pub">${escapeHtml(publisherName(j, publishers))}</span></li>`
   ).join("");
+  // Say how the list is ordered and how many carry an agreement, because with
+  // agreement-first ranking a truncated view can be entirely covered journals —
+  // the uncovered ones are still in `total`, just below the cut.
+  const covered = taSet ? journals.filter((j) => taSet.has(j.issn_l)).length : 0;
+  const coveredNote = taSet
+    ? ` <span class="ta-note">✓ ${covered} under a Northwestern agreement, listed first.</span>`
+    : "";
   const note = total !== null && total > journals.length
-    ? `<p class="result-count">Showing the ${journals.length} largest of ${total} matching journals — add a discipline to narrow it down.</p>`
-    : `<p class="result-count">${journals.length} journal${journals.length === 1 ? "" : "s"}</p>`;
+    ? `<p class="result-count">Showing ${journals.length} of ${total.toLocaleString()} matching journals.${coveredNote}</p>`
+    : `<p class="result-count">${journals.length} journal${journals.length === 1 ? "" : "s"}.${coveredNote}</p>`;
   return `${note}<ul class="result-list">${rows}</ul>`;
 }

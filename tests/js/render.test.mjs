@@ -32,5 +32,15 @@ test("disambiguation shows publisher and ISSN, not just the title", () => {
 
 test("result list reports the true total when truncated", () => {
   const html = renderList(JOURNALS, PUBLISHERS, 4200);
-  assert.match(html, /4200|4,200/);
+  assert.match(html, /4,200/);
+});
+
+test("result rows carry the agreement check only when covered", () => {
+  const html = renderList(JOURNALS, PUBLISHERS, null, TA_SET);
+  assert.equal((html.match(/ta-check/g) || []).length, 1); // JOURNALS[0] is covered, [1] is not
+  assert.match(html, /Northwestern/);
+});
+
+test("no checks at all when no TA set is supplied", () => {
+  assert.equal(renderList(JOURNALS, PUBLISHERS, null).includes("ta-check"), false);
 });

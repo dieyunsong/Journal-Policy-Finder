@@ -39,3 +39,22 @@ test("total reports the full match count even when truncated", () => {
   assert.equal(total, 250);
   assert.equal(items[0].works_count, 249); // sorted desc
 });
+
+test("journals under an agreement rank above larger journals without one", () => {
+  const js = [
+    { name: "Big, no agreement", issn_l: "0000-0001", issns: [], publisher: "P", works_count: 9000, tags: [0] },
+    { name: "Small, covered",     issn_l: "1111-2222", issns: [], publisher: "P", works_count: 5,    tags: [0] },
+    { name: "Mid, no agreement",  issn_l: "0000-0002", issns: [], publisher: "P", works_count: 400,  tags: [0] },
+  ];
+  const { items } = filterJournals(js, [0], false, new Set(["1111-2222"]));
+  assert.deepEqual(items.map((j) => j.name), ["Small, covered", "Big, no agreement", "Mid, no agreement"]);
+});
+
+test("article count still breaks ties inside each band", () => {
+  const js = [
+    { name: "covered small", issn_l: "A", issns: [], publisher: "P", works_count: 10, tags: [0] },
+    { name: "covered big",   issn_l: "B", issns: [], publisher: "P", works_count: 99, tags: [0] },
+  ];
+  const { items } = filterJournals(js, [0], false, new Set(["A", "B"]));
+  assert.deepEqual(items.map((j) => j.name), ["covered big", "covered small"]);
+});
