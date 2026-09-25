@@ -13,12 +13,8 @@ const el = (id) => document.getElementById(id);
 const resultsEl = () => el("results");
 const setStatus = (html) => (resultsEl().innerHTML = html);
 
-const EMPTY_STATE = `<p class="status intro">
-  Enter a journal to see its publisher's open-access, embargo, sharing, and APC policies —
-  or browse by discipline to find candidate journals.
-  Journals covered by a Northwestern agreement are flagged; see
-  <a href="https://dieyunsong.github.io/TA-Finder/" target="_blank" rel="noopener">TA-Finder</a>
-  for the waiver and discount details.</p>`;
+// Nothing is shown under the search box until the user searches or browses.
+const EMPTY_STATE = "";
 
 async function boot() {
   setStatus(`<p class="status loading">Loading the journal index…</p>`);

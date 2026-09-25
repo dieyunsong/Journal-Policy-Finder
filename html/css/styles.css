@@ -131,7 +131,7 @@ a:hover {
 
 .site-header .eyebrow {
   margin: 0 0 0.4rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;

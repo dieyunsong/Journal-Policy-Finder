@@ -34,7 +34,7 @@ kept separate so that updating one never requires touching the others:
 | File | What it is | Size (current) | Keyed by |
 |---|---|---|---|
 | `html/data/journals-index.json` | All-publishers lookup, pulled from [OpenAlex](https://openalex.org), filtered to journals with `works_count >= 25` | ~52,700 journals | ISSN-L |
-| `html/data/publishers.json` | Curated, human-verified policy cards (homepage, OA options, embargo/sharing, APC, notes) | 11 seed publishers today, expanding toward ~200 | OpenAlex publisher id (e.g. `P4310320595`) |
+| `html/data/publishers.json` | Curated, human-verified policy cards (homepage, OA options, embargo/sharing, APC, notes) | 87 publishers (100 OpenAlex ids incl. aliases), covering ~72% of indexed article volume | OpenAlex publisher id (e.g. `P4310320595`) |
 | `html/data/ta-agreements.json` | Northwestern TA overlay, built from `data/northwestern-agreements.csv` | ~4,500 journals | ISSN-L |
 | `html/data/taxonomy.json` | Browse taxonomy, plus the tag lookup table, per-tag journal counts, and OpenAlex publisher homepages | — | — |
 
