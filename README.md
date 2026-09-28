@@ -10,7 +10,7 @@ discover journals rather than look one up by name.
 
 Live site: <https://dieyunsong.github.io/Journal-Policy-Finder/>
 
-This tool complements [TA-Finder](https://github.com/dieyunsong/TA-Finder), which lists the
+This tool complements [the Journal with APC Agreement discovery tool](https://github.com/dieyunsong/TA-Finder), which lists the
 APC waivers/discounts each Northwestern/BTAA transformative agreement provides in detail. Journal
 Policy Finder covers **every publisher's** policies (curated ones get a full card, everyone else a
 fallback card with useful links) and simply **flags** which journals have a Northwestern TA;
