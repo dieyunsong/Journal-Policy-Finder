@@ -8,9 +8,9 @@ transformative agreement (TA)** badge when that journal is covered by one. A sec
 **browse by discipline** (Google Scholar subject taxonomy, pick 1–3 tags, optionally TA-only) to
 discover journals rather than look one up by name.
 
-Live site: <https://dieyunsong.github.io/Journal-Policy-Finder/>
+Live site: <https://www.library.northwestern.edu/resources/journal-policy-finder/>
 
-This tool complements [the Journal with APC Agreement discovery tool](https://github.com/dieyunsong/TA-Finder), which lists the
+This tool complements [the Journal with APC Agreement discovery tool](https://github.com/nulib/journals-with-apc-agreements), which lists the
 APC waivers/discounts each Northwestern/BTAA transformative agreement provides in detail. Journal
 Policy Finder covers **every publisher's** policies (curated ones get a full card, everyone else a
 fallback card with useful links) and simply **flags** which journals have a Northwestern TA;
